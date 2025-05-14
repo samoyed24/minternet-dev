@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minternet:item/router"
-  }
+  "parent": "minternet:block/router"
 }

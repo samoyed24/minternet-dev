@@ -1,6 +1,7 @@
 package com.samoyed24.minternet.item;
 
 import com.samoyed24.minternet.Minternet;
+import com.samoyed24.minternet.block.ModBlocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,8 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.NETWORK_CARD))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.NETWORK_CARD);
+                        entries.add(ModBlocks.SERVER);
+                        entries.add(ModBlocks.ROUTER);
                     })
                     .build());
     public static void registerModItemGroups() {

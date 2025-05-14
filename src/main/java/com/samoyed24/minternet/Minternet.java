@@ -1,5 +1,6 @@
 package com.samoyed24.minternet;
 
+import com.samoyed24.minternet.block.ModBlocks;
 import com.samoyed24.minternet.item.ModItemGroups;
 import com.samoyed24.minternet.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -22,6 +23,7 @@ public class Minternet implements ModInitializer {
 		// Proceed with mild caution.
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

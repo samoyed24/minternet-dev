@@ -9,8 +9,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item SERVER = registerItems("server", new Item(new Item.Settings()));
-    public static final Item ROUTER = registerItems("router", new Item(new Item.Settings()));
+//    public static final Item SERVER = registerItems("server", new Item(new Item.Settings()));
+//    public static final Item ROUTER = registerItems("router", new Item(new Item.Settings()));
     public static final Item NETWORK_CARD = registerItems("network_card", new Item(new Item.Settings()));
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);

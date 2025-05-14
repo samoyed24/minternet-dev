@@ -1,6 +1,6 @@
 {
   "itemGroup.minternet.network": "Network",
-  "item.minternet.server": "Server",
-  "item.minternet.router": "Router",
-  "item.minternet.network_card": "NIC"
+  "item.minternet.network_card": "NIC",
+  "block.minternet.server": "Server",
+  "block.minternet.router": "Router"
 }

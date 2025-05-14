@@ -3,13 +3,13 @@
 	"id": "minternet",
 	"version": "${version}",
 	"name": "Minternet",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Network that connects the minecraft world together!",
 	"authors": [
 		"Me!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/samoyed24/minternet-dev"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/minternet/icon.png",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"com.samoyed24.minternet.MinternetDataGenerator"
+		],
+		"client": [
+			"com.samoyed24.minternet.MinternetClient"
 		]
 	},
 	"mixins": [

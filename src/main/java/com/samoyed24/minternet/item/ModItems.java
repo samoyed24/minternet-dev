@@ -15,9 +15,6 @@ public class ModItems {
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);
     }
-    private static void addItemToItemGroup(FabricItemGroupEntries fabricItemGroupEntries, Item item) {
-
-    }
     public static void registerModItems() {
         Minternet.LOGGER.info("Registering Mod Items");
     }

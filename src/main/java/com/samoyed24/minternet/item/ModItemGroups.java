@@ -12,18 +12,15 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final RegistryKey<ItemGroup> NETWORK  = register("network_misc");
-    private static RegistryKey<ItemGroup> register(String id) {
-        return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, id));
-    }
+    public static final ItemGroup NETWORK = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "network"),
+            ItemGroup.create(ItemGroup.Row.TOP, 7)
+                    .displayName(Text.translatable("itemGroup.minternet.network"))
+                    .icon(() -> new ItemStack(ModItems.NETWORK_CARD))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.NETWORK_CARD);
+                    })
+                    .build());
     public static void registerModItemGroups() {
-        Registry.register(Registries.ITEM_GROUP, NETWORK,
-                ItemGroup.create(ItemGroup.Row.TOP, 7)
-                        .displayName(Text.translatable("itemGroup.minternet.network"))
-                        .icon(() -> new ItemStack(ModItems.NETWORK_CARD))
-                        .entries((displayContext, entries) -> {
-                            entries.add(ModItems.NETWORK_CARD);
-                        }).build());
         Minternet.LOGGER.info("Registering Item Groups");
     }
 }

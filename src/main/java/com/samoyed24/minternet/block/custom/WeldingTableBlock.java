@@ -5,10 +5,15 @@ import com.samoyed24.minternet.block.entity.WeldingTableBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -19,13 +24,22 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class WeldingTableBlock extends BlockWithEntity {
+    public static final DirectionProperty FACING;
+    public static final MapCodec<WeldingTableBlock> CODEC = Block.createCodec(WeldingTableBlock::new);
+
     public WeldingTableBlock(AbstractBlock.Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
+
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return createCodec(WeldingTableBlock::new);
+        return CODEC;
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(Properties.HORIZONTAL_FACING);
     }
 
     @Override
@@ -40,8 +54,22 @@ public class WeldingTableBlock extends BlockWithEntity {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0f, 0f, 0f, 2f, 1f, 1f);
+        Direction dir = state.get(FACING);
+        return switch (dir) {
+            case NORTH -> VoxelShapes.cuboid(0f, 0f, 0f, 2f, 1f, 1f);
+            case SOUTH -> VoxelShapes.cuboid(-1f, 0f, 0f, 1f, 1f, 1f);
+            case EAST -> VoxelShapes.cuboid(0f, 0f, 0f, 1f, 1f, 2f);
+            case WEST -> VoxelShapes.cuboid(0f, 0.0f, -1f, 1f, 1f, 1f);
+            default -> VoxelShapes.fullCube();
+        };
+//        return VoxelShapes.cuboid(0f, 0f, 0f, 2f, 1f, 1f);
     }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return super.getPlacementState(ctx).with(Properties.HORIZONTAL_FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    }
+
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
@@ -79,5 +107,17 @@ public class WeldingTableBlock extends BlockWithEntity {
     @Override
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    }
+
+    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+    }
+
+    protected BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+    }
+
+    static {
+        FACING = Properties.HORIZONTAL_FACING;
     }
 }

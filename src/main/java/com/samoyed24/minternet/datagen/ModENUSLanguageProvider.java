@@ -19,6 +19,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_TIN, "Raw tin");
         translationBuilder.add(ModItems.TIN_INGOT, "Tin ingot");
         translationBuilder.add(ModItems.TIN_NUGGET, "Tin nugget");
+        translationBuilder.add(ModItems.RESIN, "Resin");
 
         translationBuilder.add(ModBlocks.SERVER, "Server");
         translationBuilder.add(ModBlocks.ROUTER, "Router");
@@ -29,5 +30,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add("itemGroup.minternet.network", "Network");
         translationBuilder.add("itemGroup.minternet.mineral", "Mineral");
+        translationBuilder.add("itemGroup.minternet.network", "Minternet: Network");
+        translationBuilder.add("itemGroup.minternet.mineral", "Minternet: Mineral");
+        translationBuilder.add("itemGroup.minternet.natural", "Minternet: Natural");
     }
 }

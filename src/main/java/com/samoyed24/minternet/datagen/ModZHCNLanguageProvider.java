@@ -19,6 +19,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_TIN, "粗锡");
         translationBuilder.add(ModItems.TIN_INGOT, "锡锭");
         translationBuilder.add(ModItems.TIN_NUGGET, "锡粒");
+        translationBuilder.add(ModItems.RESIN, "树脂");
 
         translationBuilder.add(ModBlocks.SERVER, "服务器");
         translationBuilder.add(ModBlocks.ROUTER, "路由器");
@@ -26,7 +27,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.TIN_ORE, "锡矿石");
         translationBuilder.add(ModBlocks.WELDING_TABLE, "焊接工作台");
 
-        translationBuilder.add("itemGroup.minternet.network", "网络");
-        translationBuilder.add("itemGroup.minternet.mineral", "矿物");
+        translationBuilder.add("itemGroup.minternet.network", "Minternet: 网络");
+        translationBuilder.add("itemGroup.minternet.mineral", "Minternet: 矿物");
+        translationBuilder.add("itemGroup.minternet.natural", "Minternet: 自然生成");
     }
 }

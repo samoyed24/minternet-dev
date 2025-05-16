@@ -5,8 +5,10 @@
   "block.minternet.tin_ore": "锡矿石",
   "item.minternet.network_card": "网络接口卡",
   "item.minternet.raw_tin": "粗锡",
+  "item.minternet.resin": "树脂",
   "item.minternet.tin_ingot": "锡锭",
   "item.minternet.tin_nugget": "锡粒",
-  "itemGroup.minternet.mineral": "矿物",
-  "itemGroup.minternet.network": "网络"
+  "itemGroup.minternet.mineral": "Minternet: 矿物",
+  "itemGroup.minternet.natural": "Minternet: 自然生成",
+  "itemGroup.minternet.network": "Minternet: 网络"
 }

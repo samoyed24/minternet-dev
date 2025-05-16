@@ -5,8 +5,10 @@
   "block.minternet.tin_ore": "Tin ore",
   "item.minternet.network_card": "NIC",
   "item.minternet.raw_tin": "Raw tin",
+  "item.minternet.resin": "Resin",
   "item.minternet.tin_ingot": "Tin ingot",
   "item.minternet.tin_nugget": "Tin nugget",
-  "itemGroup.minternet.mineral": "Mineral",
-  "itemGroup.minternet.network": "Network"
+  "itemGroup.minternet.mineral": "Minternet: Mineral",
+  "itemGroup.minternet.natural": "Minternet: Natural",
+  "itemGroup.minternet.network": "Minternet: Network"
 }

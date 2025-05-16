@@ -3,7 +3,8 @@
 	"package": "com.samoyed24.minternet.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"AbstractFurnaceBlockEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

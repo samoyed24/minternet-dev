@@ -25,5 +25,6 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RESIN, Models.GENERATED);
     }
 }

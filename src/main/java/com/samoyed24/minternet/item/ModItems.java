@@ -13,6 +13,7 @@ public class ModItems {
     public static final Item RAW_TIN = registerItems("raw_tin", new Item(new Item.Settings()));
     public static final Item TIN_INGOT = registerItems("tin_ingot", new Item(new Item.Settings()));
     public static final Item TIN_NUGGET = registerItems("tin_nugget", new Item(new Item.Settings()));
+    public static final Item RESIN = registerItems("resin", new Item(new Item.Settings().food(ModFoodComponents.RESIN)));
 
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);

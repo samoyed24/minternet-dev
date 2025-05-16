@@ -31,8 +31,11 @@ public class ModRecipesProvider extends FabricRecipeProvider {
     public void generate(RecipeExporter recipeExporter) {
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.TIN_INGOT,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK);
-//        offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.TIN_NUGGET,
-//                RecipeCategory.MISC, ModItems.TIN_INGOT);
+        offerReversibleCompactingRecipesWithCompactingRecipeGroup(
+                recipeExporter, RecipeCategory.MISC, ModItems.TIN_NUGGET,
+                RecipeCategory.MISC, ModItems.TIN_INGOT, "tin_nugget_to_ingot",
+                "minternet:tin_ingot"
+        );
         offerSmelting(recipeExporter, TIN, RecipeCategory.MISC, ModItems.TIN_INGOT,
                 0.7f, 200, "tin");
         offerBlasting(recipeExporter, TIN, RecipeCategory.MISC, ModItems.TIN_INGOT,
@@ -48,5 +51,12 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .input('P', Items.PAPER)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.TIN_INGOT))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "network_card"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.TORCH, 2)
+                .pattern("R")
+                .pattern("S")
+                .input('R', ModItems.RESIN)
+                .input('S', Items.STICK)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RESIN ))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "torch_from_resin"));
     }
 }

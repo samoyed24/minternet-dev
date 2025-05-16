@@ -34,6 +34,14 @@ public class ModItemGroups {
                         entries.add(ModItems.TIN_NUGGET);
                         entries.add(ModBlocks.TIN_ORE);
                     }).build());
+    public static final ItemGroup NATURAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "natural"),
+            ItemGroup.create(ItemGroup.Row.TOP, 9)
+                    .displayName(Text.translatable("itemGroup.minternet.natural"))
+                    .icon(() -> new ItemStack(ModItems.RESIN))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.RESIN);
+                    }).build());
+
     public static void registerModItemGroups() {
         Minternet.LOGGER.info("Registering Item Groups");
     }

@@ -23,6 +23,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROUTER);
                     })
                     .build());
+    public static final ItemGroup MINERAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "mineral"),
+            ItemGroup.create(ItemGroup.Row.TOP, 8)
+                    .displayName(Text.translatable("itemGroup.minternet.mineral"))
+                    .icon(() -> new ItemStack(ModItems.TIN_INGOT))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.TIN_INGOT);
+                        entries.add(ModBlocks.TIN_BLOCK);
+                        entries.add(ModItems.RAW_TIN);
+                        entries.add(ModItems.TIN_NUGGET);
+                        entries.add(ModBlocks.TIN_ORE);
+                    }).build());
     public static void registerModItemGroups() {
         Minternet.LOGGER.info("Registering Item Groups");
     }

@@ -82,3 +82,5 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+tasks.withType(Copy).all { duplicatesStrategy 'exclude' }

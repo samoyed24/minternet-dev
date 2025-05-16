@@ -1,6 +1,12 @@
 {
-  "itemGroup.minternet.network": "Network",
-  "item.minternet.network_card": "NIC",
+  "block.minternet.router": "Router",
   "block.minternet.server": "Server",
-  "block.minternet.router": "Router"
+  "block.minternet.tin_block": "Tin block",
+  "block.minternet.tin_ore": "Tin ore",
+  "item.minternet.network_card": "NIC",
+  "item.minternet.raw_tin": "Raw tin",
+  "item.minternet.tin_ingot": "Tin ingot",
+  "item.minternet.tin_nugget": "Tin nugget",
+  "itemGroup.minternet.mineral": "Mineral",
+  "itemGroup.minternet.network": "Network"
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minternet:server"
+          "name": "minternet:router"
         }
       ],
       "rolls": 1.0

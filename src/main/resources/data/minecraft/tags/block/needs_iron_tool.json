@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minternet:router",
+    "minternet:server",
+    "minternet:tin_block",
+    "minternet:tin_ore"
+  ]
+}

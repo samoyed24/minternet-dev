@@ -42,6 +42,14 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RESIN);
                     }).build());
+    public static final ItemGroup TOOL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
+            ItemGroup.create(ItemGroup.Row.TOP, 10)
+                    .displayName(Text.translatable("itemGroup.minternet.tool"))
+                    .icon(() -> new ItemStack(ModItems.DIAMOND_RESIN_TAPPING_KNIFE))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.IRON_RESIN_TAPPING_KNIFE);
+                        entries.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE);
+                    }).build());
 
     public static void registerModItemGroups() {
         Minternet.LOGGER.info("Registering Item Groups");

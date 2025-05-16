@@ -1,14 +1,18 @@
 {
   "block.minternet.router": "Router",
   "block.minternet.server": "Server",
-  "block.minternet.tin_block": "Tin block",
-  "block.minternet.tin_ore": "Tin ore",
+  "block.minternet.tin_block": "Tin Block",
+  "block.minternet.tin_ore": "Tin Ore",
+  "block.minternet.welding_table": "Welding Table",
+  "item.minternet.diamond_resin_tapping_knife": "Diamond Resin Tapping Knife",
+  "item.minternet.iron_resin_tapping_knife": "Iron Resin Tapping Knife",
   "item.minternet.network_card": "NIC",
-  "item.minternet.raw_tin": "Raw tin",
+  "item.minternet.raw_tin": "Raw Tin",
   "item.minternet.resin": "Resin",
-  "item.minternet.tin_ingot": "Tin ingot",
-  "item.minternet.tin_nugget": "Tin nugget",
+  "item.minternet.tin_ingot": "Tin Ingot",
+  "item.minternet.tin_nugget": "Tin Nugget",
   "itemGroup.minternet.mineral": "Minternet: Mineral",
   "itemGroup.minternet.natural": "Minternet: Natural",
-  "itemGroup.minternet.network": "Minternet: Network"
+  "itemGroup.minternet.network": "Minternet: Network",
+  "itemGroup.minternet.tool": "Minternet: Tool"
 }

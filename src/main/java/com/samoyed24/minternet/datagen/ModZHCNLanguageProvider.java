@@ -20,6 +20,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TIN_INGOT, "锡锭");
         translationBuilder.add(ModItems.TIN_NUGGET, "锡粒");
         translationBuilder.add(ModItems.RESIN, "树脂");
+        translationBuilder.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, "钻石割胶刀");
+        translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "铁割胶刀");
 
         translationBuilder.add(ModBlocks.SERVER, "服务器");
         translationBuilder.add(ModBlocks.ROUTER, "路由器");
@@ -30,5 +32,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.minternet.network", "Minternet: 网络");
         translationBuilder.add("itemGroup.minternet.mineral", "Minternet: 矿物");
         translationBuilder.add("itemGroup.minternet.natural", "Minternet: 自然生成");
+        translationBuilder.add("itemGroup.minternet.tool", "Minternet: 工具");
+
     }
 }

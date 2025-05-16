@@ -16,22 +16,24 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.NETWORK_CARD, "NIC");
-        translationBuilder.add(ModItems.RAW_TIN, "Raw tin");
-        translationBuilder.add(ModItems.TIN_INGOT, "Tin ingot");
-        translationBuilder.add(ModItems.TIN_NUGGET, "Tin nugget");
+        translationBuilder.add(ModItems.RAW_TIN, "Raw Tin");
+        translationBuilder.add(ModItems.TIN_INGOT, "Tin Ingot");
+        translationBuilder.add(ModItems.TIN_NUGGET, "Tin Nugget");
         translationBuilder.add(ModItems.RESIN, "Resin");
+        translationBuilder.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, "Diamond Resin Tapping Knife");
+        translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "Iron Resin Tapping Knife");
 
         translationBuilder.add(ModBlocks.SERVER, "Server");
         translationBuilder.add(ModBlocks.ROUTER, "Router");
-        translationBuilder.add(ModBlocks.TIN_BLOCK, "Tin block");
-        translationBuilder.add(ModBlocks.TIN_ORE, "Tin ore");
+        translationBuilder.add(ModBlocks.TIN_BLOCK, "Tin Block");
+        translationBuilder.add(ModBlocks.TIN_ORE, "Tin Ore");
 
-        translationBuilder.add(ModBlocks.WELDING_TABLE, "Welding table");
+        translationBuilder.add(ModBlocks.WELDING_TABLE, "Welding Table");
 
-        translationBuilder.add("itemGroup.minternet.network", "Network");
-        translationBuilder.add("itemGroup.minternet.mineral", "Mineral");
         translationBuilder.add("itemGroup.minternet.network", "Minternet: Network");
         translationBuilder.add("itemGroup.minternet.mineral", "Minternet: Mineral");
         translationBuilder.add("itemGroup.minternet.natural", "Minternet: Natural");
+        translationBuilder.add("itemGroup.minternet.tool", "Minternet: Tool");
+
     }
 }

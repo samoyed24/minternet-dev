@@ -1,8 +1,10 @@
 package com.samoyed24.minternet.datagen;
 
 import com.samoyed24.minternet.block.ModBlocks;
+import com.samoyed24.minternet.tags.ModBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -26,5 +28,8 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.SERVER)
                 .add(ModBlocks.TIN_BLOCK)
                 .add(ModBlocks.TIN_ORE);
+
+        getOrCreateTagBuilder(ModBlockTags.RUBBER_FROM_LIST)
+                .add(Blocks.SPRUCE_LOG);
     }
 }

@@ -5,6 +5,7 @@ import com.samoyed24.minternet.block.entity.ModBlockEntityTypes;
 import com.samoyed24.minternet.item.ModItemGroups;
 import com.samoyed24.minternet.item.ModItems;
 import com.samoyed24.minternet.screen.ModScreenHandlers;
+import com.samoyed24.minternet.tags.ModBlockTags;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -28,6 +29,7 @@ public class Minternet implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModBlockEntityTypes.registerBlockEntityTypes();
 		ModScreenHandlers.registerScreenHandlers();
+		ModBlockTags.registerModBlockTags();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

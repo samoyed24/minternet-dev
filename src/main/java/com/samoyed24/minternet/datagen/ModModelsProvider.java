@@ -27,5 +27,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RESIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.IRON_RESIN_TAPPING_KNIFE, Models.GENERATED);
     }
 }

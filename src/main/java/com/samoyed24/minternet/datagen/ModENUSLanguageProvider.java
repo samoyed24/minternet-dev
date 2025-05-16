@@ -25,6 +25,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.TIN_BLOCK, "Tin block");
         translationBuilder.add(ModBlocks.TIN_ORE, "Tin ore");
 
+        translationBuilder.add(ModBlocks.WELDING_TABLE, "Welding table");
+
         translationBuilder.add("itemGroup.minternet.network", "Network");
         translationBuilder.add("itemGroup.minternet.mineral", "Mineral");
     }

@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.NETWORK_CARD);
                         entries.add(ModBlocks.SERVER);
                         entries.add(ModBlocks.ROUTER);
+                        entries.add(ModBlocks.WELDING_TABLE);
                     })
                     .build());
     public static final ItemGroup MINERAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "mineral"),

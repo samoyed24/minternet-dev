@@ -25,6 +25,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ROUTER, "路由器");
         translationBuilder.add(ModBlocks.TIN_BLOCK, "锡块");
         translationBuilder.add(ModBlocks.TIN_ORE, "锡矿石");
+        translationBuilder.add(ModBlocks.WELDING_TABLE, "焊接工作台");
 
         translationBuilder.add("itemGroup.minternet.network", "Minternet: 网络");
         translationBuilder.add("itemGroup.minternet.mineral", "Minternet: 矿物");

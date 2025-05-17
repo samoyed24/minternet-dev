@@ -25,6 +25,11 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "铁割胶刀");
         translationBuilder.add(ModItems.DIAMOND_HAMMER, "钻石锤");
         translationBuilder.add(ModItems.IRON_HAMMER, "铁锤");
+        translationBuilder.add(ModItems.IRON_DIAGONAL_PLIERS, "铁斜口钳");
+        translationBuilder.add(ModItems.DIAMOND_DIAGONAL_PLIERS, "钻石斜口钳");
+        translationBuilder.add(ModItems.IRON_PLATE, "铁板 ");
+        translationBuilder.add(ModItems.DIAMOND_PLATE, "钻石板");
+        translationBuilder.add(ModItems.TIN_PLATE,  "锡板");
 
         translationBuilder.add(ModBlocks.SERVER, "服务器");
         translationBuilder.add(ModBlocks.ROUTER, "路由器");
@@ -38,6 +43,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.minternet.natural", "Minternet: 自然生成");
         translationBuilder.add("itemGroup.minternet.tool", "Minternet: 工具");
         translationBuilder.add("itemGroup.minternet.functional", "Minternet: 功能性方块");
+        translationBuilder.add("itemGroup.minternet.material", "Minternet: 材料");
+
 
 
         translationBuilder.add("item.minternet.resin_tapping_knife.tooltip", "§7可从云杉原木中获取树脂§r");

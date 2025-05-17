@@ -9,13 +9,12 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.BlastingRecipe;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.ShapedRecipe;
-import net.minecraft.recipe.SmokingRecipe;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -85,5 +84,53 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .input('W', ItemTags.PLANKS)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.TIN_INGOT))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "shaping_table"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.IRON_HAMMER, 1)
+                .pattern("III")
+                .pattern(" SI")
+                .pattern(" S ")
+                .input('I', Items.IRON_INGOT)
+                .input('S', Items.STICK)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "iron_hammer"));
+
+        // FIXME 目前使用非满耐久的铁锤也能合成钻石锤，后续需要修复！
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER, 1)
+                .input(ModItems.IRON_HAMMER)
+                .input(Items.DIAMOND)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.IRON_HAMMER))
+                .criterion("has_diamond", RecipeProvider.conditionsFromItem(Items.DIAMOND))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_hammer"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.IRON_DIAGONAL_PLIERS, 1)
+                .pattern("I I")
+                .pattern(" I ")
+                .pattern("S S")
+                .input('I', ModItems.IRON_PLATE)
+                .input('S', Items.STICK)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.IRON_PLATE))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "iron_diagonal_pliers"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_DIAGONAL_PLIERS, 1)
+                .pattern("D D")
+                .pattern(" D ")
+                .pattern("S S")
+                .input('D', ModItems.DIAMOND_PLATE)
+                .input('S', Items.STICK)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.DIAMOND_PLATE))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_diagonal_pliers"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.IRON_RESIN_TAPPING_KNIFE, 1)
+                .pattern("I  ")
+                .pattern("PI ")
+                .pattern("  S")
+                .input('I', Items.IRON_INGOT)
+                .input('P', ModItems.IRON_PLATE)
+                .input('S', Items.STICK)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.IRON_PLATE))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "iron_resin_tapping_knife"));
+        // FIXME 跟锤子一样的BUG
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_RESIN_TAPPING_KNIFE, 1)
+                .input(ModItems.IRON_RESIN_TAPPING_KNIFE)
+                .input(ModItems.DIAMOND_PLATE)
+                .criterion("has_iron_one", RecipeProvider.conditionsFromItem(ModItems.IRON_RESIN_TAPPING_KNIFE))
+                .criterion("has_diamond_plate", RecipeProvider.conditionsFromItem(ModItems.DIAMOND_PLATE))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_resin_tapping_knife"));
     }
 }

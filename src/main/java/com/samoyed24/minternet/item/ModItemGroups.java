@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup NETWORK = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "network"),
-            ItemGroup.create(ItemGroup.Row.TOP, 7)
+            ItemGroup.create(ItemGroup.Row.TOP, 6)
                     .displayName(Text.translatable("itemGroup.minternet.network"))
                     .icon(() -> new ItemStack(ModItems.NETWORK_CARD))
                     .entries((displayContext, entries) -> {
@@ -24,7 +24,7 @@ public class ModItemGroups {
                     })
                     .build());
     public static final ItemGroup MINERAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "mineral"),
-            ItemGroup.create(ItemGroup.Row.TOP, 8)
+            ItemGroup.create(ItemGroup.Row.TOP, 7)
                     .displayName(Text.translatable("itemGroup.minternet.mineral"))
                     .icon(() -> new ItemStack(ModItems.TIN_INGOT))
                     .entries((displayContext, entries) -> {
@@ -35,26 +35,27 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TIN_ORE);
                     }).build());
     public static final ItemGroup NATURAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "natural"),
-            ItemGroup.create(ItemGroup.Row.TOP, 9)
+            ItemGroup.create(ItemGroup.Row.TOP, 8)
                     .displayName(Text.translatable("itemGroup.minternet.natural"))
                     .icon(() -> new ItemStack(ModItems.RESIN))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RESIN);
-                        entries.add(ModItems.ROSIN);
                     }).build());
     public static final ItemGroup TOOL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
-            ItemGroup.create(ItemGroup.Row.TOP, 10)
+            ItemGroup.create(ItemGroup.Row.TOP, 9)
                     .displayName(Text.translatable("itemGroup.minternet.tool"))
                     .icon(() -> new ItemStack(ModItems.DIAMOND_RESIN_TAPPING_KNIFE))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.IRON_RESIN_TAPPING_KNIFE);
                         entries.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE);
-                        entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.IRON_HAMMER);
+                        entries.add(ModItems.DIAMOND_HAMMER);
+                        entries.add(ModItems.IRON_DIAGONAL_PLIERS);
+                        entries.add(ModItems.DIAMOND_DIAGONAL_PLIERS);
                     }).build());
 
     public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "functional"),
-            ItemGroup.create(ItemGroup.Row.TOP, 11)
+            ItemGroup.create(ItemGroup.Row.TOP, 10)
                     .displayName(Text.translatable("itemGroup.minternet.functional"))
                     .icon(() -> new ItemStack(ModBlocks.SHAPING_TABLE))
                     .entries((displayContext, entries) -> {
@@ -62,6 +63,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.WELDING_TABLE);
                     }).build());
 
+    public static final ItemGroup MATERIAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "material"),
+            ItemGroup.create(ItemGroup.Row.TOP, 11)
+                    .displayName(Text.translatable("itemGroup.minternet.material"))
+                    .icon(() -> new ItemStack(ModItems.DIAMOND_PLATE))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.ROSIN);
+                        entries.add(ModItems.DIAMOND_PLATE);
+                        entries.add(ModItems.IRON_PLATE);
+                        entries.add(ModItems.TIN_PLATE);
+                    }).build());
     public static void registerModItemGroups() {
         Minternet.LOGGER.info("Registering Item Groups");
     }

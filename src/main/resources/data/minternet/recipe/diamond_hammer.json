@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minternet:iron_hammer"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minternet:diamond_hammer"
+  }
+}

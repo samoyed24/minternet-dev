@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minternet:diamond_plate"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "D D",
+    " D ",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minternet:diamond_diagonal_pliers"
+  }
+}

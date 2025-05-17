@@ -25,6 +25,11 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "Iron Resin Tapping Knife");
         translationBuilder.add(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
         translationBuilder.add(ModItems.IRON_HAMMER, "Iron Hammer");
+        translationBuilder.add(ModItems.DIAMOND_DIAGONAL_PLIERS, "Diamond Diagonal Pliers");
+        translationBuilder.add(ModItems.IRON_DIAGONAL_PLIERS, "Iron Diagonal Pliers");
+        translationBuilder.add(ModItems.IRON_PLATE, "Iron Plate");
+        translationBuilder.add(ModItems.DIAMOND_PLATE, "Diamond Plate");
+        translationBuilder.add(ModItems.TIN_PLATE,  "Tin Plate");
 
         translationBuilder.add(ModBlocks.SERVER, "Server");
         translationBuilder.add(ModBlocks.ROUTER, "Router");
@@ -40,6 +45,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("itemGroup.minternet.natural", "Minternet: Natural");
         translationBuilder.add("itemGroup.minternet.tool", "Minternet: Tool");
         translationBuilder.add("itemGroup.minternet.functional", "Minternet: Functional");
+        translationBuilder.add("itemGroup.minternet.material", "Minternet: Material");
 
         translationBuilder.add("item.minternet.resin_tapping_knife.tooltip", "§7Tap resin from spruce oak§r");
         translationBuilder.add("item.minternet.resin.tooltip", "§7Eatable but we suggest not§r");

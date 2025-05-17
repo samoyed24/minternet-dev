@@ -1,6 +1,7 @@
 package com.samoyed24.minternet.item;
 
 import com.samoyed24.minternet.Minternet;
+import com.samoyed24.minternet.item.custom.DiagonalPliersItem;
 import com.samoyed24.minternet.item.custom.HammerItem;
 import com.samoyed24.minternet.item.custom.Resin;
 import com.samoyed24.minternet.item.custom.ResinTappingKnifeItem;
@@ -20,6 +21,11 @@ public class ModItems {
     public static final Item ROSIN = registerItems("rosin", new Item(new Item.Settings()));
     public static final Item IRON_HAMMER = registerItems("iron_hammer", new HammerItem(new Item.Settings().maxDamage(64)));
     public static final Item DIAMOND_HAMMER = registerItems("diamond_hammer", new HammerItem(new Item.Settings().maxDamage(384)));
+    public static final Item DIAMOND_DIAGONAL_PLIERS = registerItems("diamond_diagonal_pliers", new DiagonalPliersItem(new Item.Settings().maxDamage(384)));
+    public static final Item IRON_DIAGONAL_PLIERS = registerItems("iron_diagonal_pliers", new DiagonalPliersItem(new Item.Settings().maxDamage(64)));
+    public static final Item IRON_PLATE = registerItems("iron_plate", new Item(new Item.Settings()));
+    public static final Item DIAMOND_PLATE = registerItems("diamond_plate", new Item(new Item.Settings()));
+    public static final Item TIN_PLATE = registerItems("tin_plate", new Item(new Item.Settings()));
 
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);

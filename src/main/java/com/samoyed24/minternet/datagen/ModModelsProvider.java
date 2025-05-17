@@ -21,7 +21,7 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_ORE);
 
         // 对于已经通过外部添加模型JSON的方块，在这个部分单独注册BlockState
-        blockStateModelGenerator.registerSimpleState(ModBlocks.WELDING_TABLE);
+//        blockStateModelGenerator.registerSimpleState(ModBlocks.WELDING_TABLE);
         blockStateModelGenerator.registerSimpleState(ModBlocks.SHAPING_TABLE);
     }
 
@@ -37,5 +37,10 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ROSIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.DIAMOND_HAMMER, Models.GENERATED);
         itemModelGenerator.register(ModItems.IRON_HAMMER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_DIAGONAL_PLIERS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.IRON_DIAGONAL_PLIERS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.IRON_PLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_PLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TIN_PLATE, Models.GENERATED);
     }
 }

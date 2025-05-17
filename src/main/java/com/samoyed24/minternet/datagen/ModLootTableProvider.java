@@ -30,6 +30,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROUTER);
         addDrop(ModBlocks.TIN_BLOCK);
         addDrop(ModBlocks.TIN_ORE, tinOreDrops(ModBlocks.TIN_ORE));
+        addDrop(ModBlocks.SHAPING_TABLE);
     }
 
     public LootTable.Builder tinOreDrops(Block drop) {

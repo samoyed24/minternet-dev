@@ -21,7 +21,6 @@ public class ModItemGroups {
                         entries.add(ModItems.NETWORK_CARD);
                         entries.add(ModBlocks.SERVER);
                         entries.add(ModBlocks.ROUTER);
-                        entries.add(ModBlocks.WELDING_TABLE);
                     })
                     .build());
     public static final ItemGroup MINERAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "mineral"),
@@ -49,6 +48,15 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.IRON_RESIN_TAPPING_KNIFE);
                         entries.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE);
+                    }).build());
+
+    public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
+            ItemGroup.create(ItemGroup.Row.TOP, 10)
+                    .displayName(Text.translatable("itemGroup.minternet.functional"))
+                    .icon(() -> new ItemStack(ModBlocks.SHAPING_TABLE))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SHAPING_TABLE);
+                        entries.add(ModBlocks.WELDING_TABLE);
                     }).build());
 
     public static void registerModItemGroups() {

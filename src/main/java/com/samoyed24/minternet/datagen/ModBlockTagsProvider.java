@@ -21,13 +21,15 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ROUTER)
                 .add(ModBlocks.SERVER)
                 .add(ModBlocks.TIN_BLOCK)
-                .add(ModBlocks.TIN_ORE);
+                .add(ModBlocks.TIN_ORE)
+                .add(ModBlocks.SHAPING_TABLE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ROUTER)
                 .add(ModBlocks.SERVER)
                 .add(ModBlocks.TIN_BLOCK)
-                .add(ModBlocks.TIN_ORE);
+                .add(ModBlocks.TIN_ORE)
+                .add(ModBlocks.SHAPING_TABLE);
 
         getOrCreateTagBuilder(ModBlockTags.RUBBER_FROM_LIST)
                 .add(Blocks.SPRUCE_LOG);

@@ -9,6 +9,8 @@
   "item.minternet.network_card": "NIC",
   "item.minternet.raw_tin": "Raw Tin",
   "item.minternet.resin": "Resin",
+  "item.minternet.resin.tooltip": "§7Eatable but we suggest not§r",
+  "item.minternet.resin_tapping_knife.tooltip": "§7Tap resin from spruce oak§r",
   "item.minternet.tin_ingot": "Tin Ingot",
   "item.minternet.tin_nugget": "Tin Nugget",
   "itemGroup.minternet.mineral": "Minternet: Mineral",

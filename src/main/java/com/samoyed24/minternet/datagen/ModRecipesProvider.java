@@ -5,14 +5,18 @@ import com.samoyed24.minternet.block.ModBlocks;
 import com.samoyed24.minternet.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -56,7 +60,17 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .pattern("S")
                 .input('R', ModItems.RESIN)
                 .input('S', Items.STICK)
-                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RESIN ))
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RESIN))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "torch_from_resin"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.SHAPING_TABLE , 1)
+                .pattern("III")
+                .pattern("TST")
+                .pattern("WWW")
+                .input('T', ModItems.TIN_INGOT)
+                .input('S', Blocks.SMITHING_TABLE)
+                .input('I', Items.IRON_INGOT)
+                .input('W', ItemTags.PLANKS)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "shaping_table"));
     }
 }

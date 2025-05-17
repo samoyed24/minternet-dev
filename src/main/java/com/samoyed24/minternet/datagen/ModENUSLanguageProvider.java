@@ -29,11 +29,16 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.TIN_ORE, "Tin Ore");
 
         translationBuilder.add(ModBlocks.WELDING_TABLE, "Welding Table");
+        translationBuilder.add(ModBlocks.SHAPING_TABLE, "Shaping Table");
+
 
         translationBuilder.add("itemGroup.minternet.network", "Minternet: Network");
         translationBuilder.add("itemGroup.minternet.mineral", "Minternet: Mineral");
         translationBuilder.add("itemGroup.minternet.natural", "Minternet: Natural");
         translationBuilder.add("itemGroup.minternet.tool", "Minternet: Tool");
+        translationBuilder.add("itemGroup.minternet.functional", "Minternet: Functional");
 
+        translationBuilder.add("item.minternet.resin_tapping_knife.tooltip", "§7Tap resin from spruce oak§r");
+        translationBuilder.add("item.minternet.resin.tooltip", "§7Eatable but we suggest not§r");
     }
 }

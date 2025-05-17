@@ -15,9 +15,14 @@ public class ModModelsProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+
 //        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WELDING_TABLE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_ORE);
+
+        // 对于已经通过外部添加模型JSON的方块，在这个部分单独注册BlockState
+        blockStateModelGenerator.registerSimpleState(ModBlocks.WELDING_TABLE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.SHAPING_TABLE);
     }
 
     @Override

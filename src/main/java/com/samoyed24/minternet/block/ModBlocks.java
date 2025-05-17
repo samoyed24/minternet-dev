@@ -16,6 +16,7 @@ public class ModBlocks {
     public static final Block TIN_BLOCK = register("tin_block", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0f, 3.0f)));
     public static final Block TIN_ORE = register("tin_ore", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0f, 3.0f)));
     public static final Block WELDING_TABLE = register("welding_table", new WeldingTableBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0f, 3.0f)));
+    public static final Block SHAPING_TABLE = register("shaping_table", new Block(AbstractBlock.Settings.create().requiresTool().strength(3.0f, 3.0f)));
     public static void registerBlockItems(String id, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), new BlockItem(block, new Item.Settings()));
     }

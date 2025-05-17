@@ -9,6 +9,8 @@
   "item.minternet.network_card": "网络接口卡",
   "item.minternet.raw_tin": "粗锡",
   "item.minternet.resin": "树脂",
+  "item.minternet.resin.tooltip": "§7可以吃但最好别§r",
+  "item.minternet.resin_tapping_knife.tooltip": "§7可从云杉原木中获取树脂§r",
   "item.minternet.tin_ingot": "锡锭",
   "item.minternet.tin_nugget": "锡粒",
   "itemGroup.minternet.mineral": "Minternet: 矿物",

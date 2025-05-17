@@ -1,6 +1,7 @@
 {
   "block.minternet.router": "Router",
   "block.minternet.server": "Server",
+  "block.minternet.shaping_table": "Shaping Table",
   "block.minternet.tin_block": "Tin Block",
   "block.minternet.tin_ore": "Tin Ore",
   "block.minternet.welding_table": "Welding Table",
@@ -13,6 +14,7 @@
   "item.minternet.resin_tapping_knife.tooltip": "§7Tap resin from spruce oak§r",
   "item.minternet.tin_ingot": "Tin Ingot",
   "item.minternet.tin_nugget": "Tin Nugget",
+  "itemGroup.minternet.functional": "Minternet: Functional",
   "itemGroup.minternet.mineral": "Minternet: Mineral",
   "itemGroup.minternet.natural": "Minternet: Natural",
   "itemGroup.minternet.network": "Minternet: Network",

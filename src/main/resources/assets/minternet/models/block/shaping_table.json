@@ -3,7 +3,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"3": "minternet:block/shaping_table",
-		"particle": "tin_block"
+		"particle": "minternet:block/tin_block"
 	},
 	"elements": [
 		{

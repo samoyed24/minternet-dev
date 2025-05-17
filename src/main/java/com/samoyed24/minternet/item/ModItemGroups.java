@@ -50,8 +50,8 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE);
                     }).build());
 
-    public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
-            ItemGroup.create(ItemGroup.Row.TOP, 10)
+    public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "functional"),
+            ItemGroup.create(ItemGroup.Row.TOP, 11)
                     .displayName(Text.translatable("itemGroup.minternet.functional"))
                     .icon(() -> new ItemStack(ModBlocks.SHAPING_TABLE))
                     .entries((displayContext, entries) -> {

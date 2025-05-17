@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:smithing_table"
+    },
+    "T": {
+      "item": "minternet:tin_ingot"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "III",
+    "TST",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minternet:shaping_table"
+  }
+}

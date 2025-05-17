@@ -3,6 +3,7 @@
     "minternet:router",
     "minternet:server",
     "minternet:tin_block",
-    "minternet:tin_ore"
+    "minternet:tin_ore",
+    "minternet:shaping_table"
   ]
 }

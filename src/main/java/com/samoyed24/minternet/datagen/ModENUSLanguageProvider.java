@@ -23,6 +23,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ROSIN, "Rosin");
         translationBuilder.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, "Diamond Resin Tapping Knife");
         translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "Iron Resin Tapping Knife");
+        translationBuilder.add(ModItems.DIAMOND_HAMMER, "Diamond Hammer");
+        translationBuilder.add(ModItems.IRON_HAMMER, "Iron Hammer");
 
         translationBuilder.add(ModBlocks.SERVER, "Server");
         translationBuilder.add(ModBlocks.ROUTER, "Router");

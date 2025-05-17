@@ -49,6 +49,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.IRON_RESIN_TAPPING_KNIFE);
                         entries.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE);
+                        entries.add(ModItems.DIAMOND_HAMMER);
+                        entries.add(ModItems.IRON_HAMMER);
                     }).build());
 
     public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "functional"),

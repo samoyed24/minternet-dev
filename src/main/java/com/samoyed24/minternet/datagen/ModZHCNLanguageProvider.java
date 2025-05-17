@@ -23,6 +23,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ROSIN, "松香");
         translationBuilder.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, "钻石割胶刀");
         translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "铁割胶刀");
+        translationBuilder.add(ModItems.DIAMOND_HAMMER, "钻石锤");
+        translationBuilder.add(ModItems.IRON_HAMMER, "铁锤");
 
         translationBuilder.add(ModBlocks.SERVER, "服务器");
         translationBuilder.add(ModBlocks.ROUTER, "路由器");

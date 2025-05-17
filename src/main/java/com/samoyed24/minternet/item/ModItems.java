@@ -1,6 +1,7 @@
 package com.samoyed24.minternet.item;
 
 import com.samoyed24.minternet.Minternet;
+import com.samoyed24.minternet.item.custom.HammerItem;
 import com.samoyed24.minternet.item.custom.Resin;
 import com.samoyed24.minternet.item.custom.ResinTappingKnifeItem;
 import net.minecraft.item.Item;
@@ -17,6 +18,8 @@ public class ModItems {
     public static final Item IRON_RESIN_TAPPING_KNIFE = registerItems("iron_resin_tapping_knife", new ResinTappingKnifeItem(new Item.Settings().maxDamage(128)));
     public static final Item DIAMOND_RESIN_TAPPING_KNIFE = registerItems("diamond_resin_tapping_knife", new ResinTappingKnifeItem(new Item.Settings().maxDamage(700)));
     public static final Item ROSIN = registerItems("rosin", new Item(new Item.Settings()));
+    public static final Item IRON_HAMMER = registerItems("iron_hammer", new HammerItem(new Item.Settings().maxDamage(64)));
+    public static final Item DIAMOND_HAMMER = registerItems("diamond_hammer", new HammerItem(new Item.Settings().maxDamage(384)));
 
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);

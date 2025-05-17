@@ -1,8 +1,7 @@
 {
   "variants": {
-    "facing=north": { "model": "minternet:block/welding_table", "uvlock": false },
-    "facing=east":  { "model": "minternet:block/welding_table", "y":  90, "uvlock": false },
-    "facing=south": { "model": "minternet:block/welding_table", "y": 180, "uvlock": false },
-    "facing=west":  { "model": "minternet:block/welding_table", "y": 270, "uvlock": false }
+    "": {
+      "model": "minternet:block/welding_table"
+    }
   }
 }

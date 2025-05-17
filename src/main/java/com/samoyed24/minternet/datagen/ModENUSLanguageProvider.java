@@ -20,6 +20,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.TIN_INGOT, "Tin Ingot");
         translationBuilder.add(ModItems.TIN_NUGGET, "Tin Nugget");
         translationBuilder.add(ModItems.RESIN, "Resin");
+        translationBuilder.add(ModItems.ROSIN, "Rosin");
         translationBuilder.add(ModItems.DIAMOND_RESIN_TAPPING_KNIFE, "Diamond Resin Tapping Knife");
         translationBuilder.add(ModItems.IRON_RESIN_TAPPING_KNIFE, "Iron Resin Tapping Knife");
 

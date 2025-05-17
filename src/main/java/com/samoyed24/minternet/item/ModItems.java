@@ -16,7 +16,7 @@ public class ModItems {
     public static final Item RESIN = registerItems("resin", new Resin(new Item.Settings().food(ModFoodComponents.RESIN)));
     public static final Item IRON_RESIN_TAPPING_KNIFE = registerItems("iron_resin_tapping_knife", new ResinTappingKnifeItem(new Item.Settings().maxDamage(128)));
     public static final Item DIAMOND_RESIN_TAPPING_KNIFE = registerItems("diamond_resin_tapping_knife", new ResinTappingKnifeItem(new Item.Settings().maxDamage(700)));
-
+    public static final Item ROSIN = registerItems("rosin", new Item(new Item.Settings()));
 
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);

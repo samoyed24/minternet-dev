@@ -12,7 +12,10 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.BlastingRecipe;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapedRecipe;
+import net.minecraft.recipe.SmokingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -27,8 +30,17 @@ public class ModRecipesProvider extends FabricRecipeProvider {
             ModItems.RAW_TIN,
             ModBlocks.TIN_ORE
     );
+    public static final List<ItemConvertible> RESIN = List.of(
+            ModItems.RESIN
+    );
     public ModRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
+    }
+
+    public static void offerSmoking(
+            RecipeExporter exporter, List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group
+    ) {
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, SmokingRecipe::new, inputs, category, output, experience, cookingTime, group, "_from_smoking");
     }
 
     @Override
@@ -44,7 +56,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 0.7f, 200, "tin");
         offerBlasting(recipeExporter, TIN, RecipeCategory.MISC, ModItems.TIN_INGOT,
                 0.7f, 100, "tin");
-
+        offerSmoking(recipeExporter, RESIN, RecipeCategory.MISC, ModItems.ROSIN,
+                    0.7F, 160, "resin");
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.NETWORK_CARD, 1)
                 .pattern("RRR")
                 .pattern("TGT")

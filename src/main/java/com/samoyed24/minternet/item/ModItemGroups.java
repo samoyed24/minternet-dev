@@ -40,6 +40,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.RESIN))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RESIN);
+                        entries.add(ModItems.ROSIN);
                     }).build());
     public static final ItemGroup TOOL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
             ItemGroup.create(ItemGroup.Row.TOP, 10)

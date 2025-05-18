@@ -131,7 +131,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_diamond_plate", RecipeProvider.conditionsFromItem(ModItems.DIAMOND_PLATE))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_resin_tapping_knife"));
         ShapingTableRecipeJsonBuilder.create(Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(ModItems.DIAMOND_HAMMER)), new ItemStack(Items.DIAMOND), RecipeCategory.TOOLS)
-//                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.COAL_BLOCK))
-                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "coal_block_to_diamond"));
+                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.COAL_BLOCK))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "coal_block_to_diamond_shaping"));
     }
 }

@@ -1,5 +1,6 @@
 package com.samoyed24.minternet.block.entity;
 
+import com.samoyed24.minternet.Minternet;
 import com.samoyed24.minternet.data.ShapingTableData;
 import com.samoyed24.minternet.recipe.ShapingTableRecipe;
 import com.samoyed24.minternet.recipe.ShapingTableRecipeInput;
@@ -8,12 +9,14 @@ import com.samoyed24.minternet.screen.WeldingTableScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.MinecartItem;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
@@ -21,12 +24,14 @@ import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 
 public class ShapingTableEntity extends BlockEntity implements ExtendedScreenHandlerFactory<ShapingTableData>, ImplementedInventory {
     public static final int INPUT_SLOT0 = 0;
@@ -35,6 +40,7 @@ public class ShapingTableEntity extends BlockEntity implements ExtendedScreenHan
     public static final int OUTPUT_SLOT = 3;
     public boolean is_button_click = false;
     protected final PropertyDelegate propertyDelegate;
+    public static final int MAX_PROGRESS = 72;
     private int progress = 0;
     private int maxProgress = 72;
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
@@ -103,7 +109,13 @@ public class ShapingTableEntity extends BlockEntity implements ExtendedScreenHan
 
     public void onTick(World world, BlockPos pos, BlockState state) {
         if (world.isClient) return;
-        if (isOutputSlotAvailable()) {
+        if (hasRecipe()) {
+//            Minternet.LOGGER.info("set maxProgress");
+            propertyDelegate.set(1, MAX_PROGRESS);
+        } else {
+            propertyDelegate.set(1, 0);
+        }
+        if (is_button_click && isOutputSlotAvailable()) {
             if (hasRecipe()) {
                 this.progress++;
                 markDirty(world, pos, state);
@@ -111,12 +123,15 @@ public class ShapingTableEntity extends BlockEntity implements ExtendedScreenHan
                 if (this.progress >= this.maxProgress) {
                     craftItem();
                     this.progress = 0;
+                    is_button_click = false;
                 }
             } else {
                 this.progress = 0;
+                is_button_click = false;
             }
         } else {
             this.progress = 0;
+            is_button_click = false;
             markDirty(world, pos, state);
         }
     }
@@ -127,6 +142,7 @@ public class ShapingTableEntity extends BlockEntity implements ExtendedScreenHan
                 this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
         this.removeStack(INPUT_SLOT0, 1);
         this.removeStack(INPUT_SLOT1, 1);
+        this.getStack(TOOL_SLOT).damage(1, (ServerWorld) getWorld(), null, (item) -> {});
 
     }
     private Optional<RecipeEntry<ShapingTableRecipe>> getCurrentRecipe() {

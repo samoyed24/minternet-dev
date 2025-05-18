@@ -1,5 +1,6 @@
 package com.samoyed24.minternet.screen;
 
+import com.samoyed24.minternet.Minternet;
 import com.samoyed24.minternet.block.entity.ShapingTableEntity;
 import com.samoyed24.minternet.data.ShapingTableData;
 import net.minecraft.block.entity.BlockEntity;
@@ -12,6 +13,8 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+
+import java.util.logging.Logger;
 
 public class ShapingTableScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -36,7 +39,7 @@ public class ShapingTableScreenHandler extends ScreenHandler {
         // 这会将槽位放置在 3×3 网格的正确位置中。这些槽位在客户端和服务器中都存在！
         // 但是这不会渲染槽位的背景，这是 Screens 类的工作
         this.addSlot(new Slot(inventory, 0, 35, 35));
-        this.addSlot(new Slot(inventory, 1, 57, 35));
+        this.addSlot(new Slot(inventory, 1, 56, 35));
         this.addSlot(new Slot(inventory, 2, 84, 54));
         this.addSlot(new Slot(inventory, 3, 116, 35));
 
@@ -53,6 +56,14 @@ public class ShapingTableScreenHandler extends ScreenHandler {
             this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
         }
 
+    }
+
+    @Override
+    public boolean onButtonClick(PlayerEntity player, int id) {
+        if (id == 0 && canClickButton()) {
+            blockEntity.is_button_click = true;
+        }
+        return true;
     }
 
     @Override
@@ -87,8 +98,12 @@ public class ShapingTableScreenHandler extends ScreenHandler {
     public boolean isCrafting() {
         return propertyDelegate.get(0) > 0;
     }
+    public boolean canClickButton() {
+        if (propertyDelegate.get(1) > 0) Minternet.LOGGER.info("can click button");
+        return propertyDelegate.get(1) > 0;
+    }
     public int getScaledProgress() {
-        final int progressArrowSize = 100;
+        final int progressArrowSize = 21;
         int progress = propertyDelegate.get(0);
         int maxProgress = propertyDelegate.get(1);
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;

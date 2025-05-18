@@ -10,9 +10,7 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -132,5 +130,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_iron_one", RecipeProvider.conditionsFromItem(ModItems.IRON_RESIN_TAPPING_KNIFE))
                 .criterion("has_diamond_plate", RecipeProvider.conditionsFromItem(ModItems.DIAMOND_PLATE))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_resin_tapping_knife"));
+        ShapingTableRecipeJsonBuilder.create(Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(ModItems.DIAMOND_HAMMER)), new ItemStack(Items.DIAMOND), RecipeCategory.TOOLS)
+//                .criterion("has_item", RecipeProvider.conditionsFromItem(Items.COAL_BLOCK))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "coal_block_to_diamond"));
     }
 }

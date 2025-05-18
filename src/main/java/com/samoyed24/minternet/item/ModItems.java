@@ -26,11 +26,14 @@ public class ModItems {
     public static final Item IRON_PLATE = registerItems("iron_plate", new Item(new Item.Settings()));
     public static final Item DIAMOND_PLATE = registerItems("diamond_plate", new Item(new Item.Settings()));
     public static final Item TIN_PLATE = registerItems("tin_plate", new Item(new Item.Settings()));
+    public static final Item COPPER_PLATE = registerItems("copper_plate", new Item(new Item.Settings()));
     public static final Item CRUDE_TIN_ROD = registerItems("crude_tin_rod", new Item(new Item.Settings()));
     public static final Item CRUDE_IRON_ROD = registerItems("crude_iron_rod", new Item(new Item.Settings()));
+    public static final Item CRUDE_COPPER_ROD = registerItems("crude_copper_rod", new Item(new Item.Settings()));
     public static final Item TIN_WIRE = registerItems("tin_wire", new Item(new Item.Settings()));
     public static final Item IRON_WIRE = registerItems("iron_wire", new Item(new Item.Settings()));
-
+    public static final Item COPPER_WIRE = registerItems("copper_wire", new Item(new Item.Settings()));
+    public static final Item SOLDER_WIRE = registerItems("solder_wire", new Item(new Item.Settings().maxDamage(64)));
     private static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Minternet.MOD_ID, id), item);
     }

@@ -2,6 +2,7 @@ package com.samoyed24.minternet.datagen;
 
 import com.samoyed24.minternet.Minternet;
 import com.samoyed24.minternet.block.ModBlocks;
+import com.samoyed24.minternet.datagen.custom.ShapingTableRecipeJsonBuilder;
 import com.samoyed24.minternet.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -11,11 +12,9 @@ import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.*;
-import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
@@ -130,6 +129,14 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .criterion("has_iron_one", RecipeProvider.conditionsFromItem(ModItems.IRON_RESIN_TAPPING_KNIFE))
                 .criterion("has_diamond_plate", RecipeProvider.conditionsFromItem(ModItems.DIAMOND_PLATE))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "diamond_resin_tapping_knife"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SOLDER_WIRE, 1)
+                .pattern("TTT")
+                .pattern("TIT")
+                .pattern("TTT")
+                .input('T', ModItems.TIN_WIRE)
+                .input('I', Items.IRON_INGOT)
+                .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.TIN_WIRE))
+                .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "solder_wire"));
         ShapingTableRecipeJsonBuilder.create(Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(Items.COAL_BLOCK)), Ingredient.ofStacks(new ItemStack(ModItems.DIAMOND_HAMMER)), new ItemStack(Items.DIAMOND), RecipeCategory.TOOLS)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(Items.COAL_BLOCK))
                 .offerTo(recipeExporter, Identifier.of(Minternet.MOD_ID, "coal_block_to_diamond_shaping"));

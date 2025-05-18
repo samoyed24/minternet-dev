@@ -1,6 +1,7 @@
 package com.samoyed24.minternet.recipe;
 
 import com.samoyed24.minternet.Minternet;
+import com.samoyed24.minternet.recipe.custom.ShapingTableRecipe;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;

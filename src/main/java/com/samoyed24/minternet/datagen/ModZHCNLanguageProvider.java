@@ -30,10 +30,14 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.IRON_PLATE, "铁板 ");
         translationBuilder.add(ModItems.DIAMOND_PLATE, "钻石板");
         translationBuilder.add(ModItems.TIN_PLATE,  "锡板");
+        translationBuilder.add(ModItems.COPPER_PLATE, "铜板");
         translationBuilder.add(ModItems.CRUDE_TIN_ROD, "粗锡棒");
         translationBuilder.add(ModItems.CRUDE_IRON_ROD, "粗铁棒");
+        translationBuilder.add(ModItems.CRUDE_COPPER_ROD, "粗铜棒");
         translationBuilder.add(ModItems.TIN_WIRE, "锡丝");
-        translationBuilder.add(ModItems.IRON_WIRE, "铁丝");
+        translationBuilder.add(ModItems.IRON_WIRE, "铁丝");;
+        translationBuilder.add(ModItems.COPPER_WIRE, "铜丝");
+        translationBuilder.add(ModItems.SOLDER_WIRE, "焊锡丝");
 
         translationBuilder.add(ModBlocks.SERVER, "服务器");
         translationBuilder.add(ModBlocks.ROUTER, "路由器");

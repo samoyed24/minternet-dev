@@ -3,20 +3,19 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.samoyed24.minternet.datagen;
+package com.samoyed24.minternet.datagen.custom;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import com.samoyed24.minternet.recipe.ShapingTableRecipe;
+import com.samoyed24.minternet.recipe.custom.ShapingTableRecipe;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.advancement.AdvancementRequirements.CriterionMerger;
 import net.minecraft.advancement.AdvancementRewards.Builder;
 import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;

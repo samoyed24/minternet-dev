@@ -46,5 +46,9 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRUDE_IRON_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_WIRE, Models.GENERATED);
         itemModelGenerator.register(ModItems.IRON_WIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_PLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_WIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRUDE_COPPER_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOLDER_WIRE, Models.GENERATED);
     }
 }

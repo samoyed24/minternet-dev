@@ -1,0 +1,16 @@
+{
+  "type": "minternet:shaping_table",
+  "material1": {
+    "item": "minecraft:coal_block"
+  },
+  "material2": {
+    "item": "minecraft:coal_block"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:diamond"
+  },
+  "tool": {
+    "item": "minternet:diamond_hammer"
+  }
+}

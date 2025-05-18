@@ -1,4 +1,4 @@
-package com.samoyed24.minternet.recipe;
+package com.samoyed24.minternet.recipe.custom;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.input.RecipeInput;

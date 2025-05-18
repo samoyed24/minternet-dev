@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROUTER);
                     })
                     .build());
+
     public static final ItemGroup MINERAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "mineral"),
             ItemGroup.create(ItemGroup.Row.TOP, 7)
                     .displayName(Text.translatable("itemGroup.minternet.mineral"))
@@ -34,6 +35,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TIN_NUGGET);
                         entries.add(ModBlocks.TIN_ORE);
                     }).build());
+
     public static final ItemGroup NATURAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "natural"),
             ItemGroup.create(ItemGroup.Row.TOP, 8)
                     .displayName(Text.translatable("itemGroup.minternet.natural"))
@@ -41,6 +43,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RESIN);
                     }).build());
+
     public static final ItemGroup TOOL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "tool"),
             ItemGroup.create(ItemGroup.Row.TOP, 9)
                     .displayName(Text.translatable("itemGroup.minternet.tool"))
@@ -52,6 +55,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.IRON_DIAGONAL_PLIERS);
                         entries.add(ModItems.DIAMOND_DIAGONAL_PLIERS);
+                        entries.add(ModItems.SOLDER_WIRE);
                     }).build());
 
     public static final ItemGroup FUNCTIONAL = Registry.register(Registries.ITEM_GROUP, Identifier.of(Minternet.MOD_ID, "functional"),
@@ -69,11 +73,14 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.DIAMOND_PLATE))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.ROSIN);
+                        entries.add(ModItems.COPPER_PLATE);
                         entries.add(ModItems.DIAMOND_PLATE);
                         entries.add(ModItems.IRON_PLATE);
                         entries.add(ModItems.TIN_PLATE);
+                        entries.add(ModItems.CRUDE_COPPER_ROD);
                         entries.add(ModItems.CRUDE_TIN_ROD);
                         entries.add(ModItems.CRUDE_IRON_ROD);
+                        entries.add(ModItems.COPPER_WIRE);
                         entries.add(ModItems.TIN_WIRE);
                         entries.add(ModItems.IRON_WIRE);
                     }).build());

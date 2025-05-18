@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:copper_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:iron_ingot",
+    "minternet:tin_ingot",
+    "minternet:copper_plate",
+    "minternet:tin_plate",
+    "minternet:iron_plate"
+  ]
+}

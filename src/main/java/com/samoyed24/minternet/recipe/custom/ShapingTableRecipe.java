@@ -1,18 +1,13 @@
-package com.samoyed24.minternet.recipe;
+package com.samoyed24.minternet.recipe.custom;
 
-import com.mojang.serialization.DataResult;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.recipe.*;
-import net.minecraft.recipe.input.CraftingRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
-
-import java.util.List;
 
 public class ShapingTableRecipe implements Recipe<ShapingTableRecipeInput> {
     private final ItemStack output;

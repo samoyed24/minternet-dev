@@ -30,6 +30,10 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.IRON_PLATE, "Iron Plate");
         translationBuilder.add(ModItems.DIAMOND_PLATE, "Diamond Plate");
         translationBuilder.add(ModItems.TIN_PLATE,  "Tin Plate");
+        translationBuilder.add(ModItems.CRUDE_TIN_ROD, "Crude Tin Rod");
+        translationBuilder.add(ModItems.CRUDE_IRON_ROD, "Crude Iron Rod");
+        translationBuilder.add(ModItems.TIN_WIRE, "Tin Wire");
+        translationBuilder.add(ModItems.IRON_WIRE, "Iron Wire");
 
         translationBuilder.add(ModBlocks.SERVER, "Server");
         translationBuilder.add(ModBlocks.ROUTER, "Router");

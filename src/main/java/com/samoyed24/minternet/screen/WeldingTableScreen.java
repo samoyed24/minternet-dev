@@ -1,6 +1,7 @@
 package com.samoyed24.minternet.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.samoyed24.minternet.Minternet;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
@@ -9,7 +10,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class WeldingTableScreen extends HandledScreen<WeldingTableScreenHandler> {
-    private static final Identifier TEXTURE = Identifier.ofVanilla("textures/gui/container/dispenser.png");
+    protected int backgroundWidth = 226;
+    protected int backgroundHeight = 166;
+    private static final Identifier TEXTURE = Identifier.of(Minternet.MOD_ID, "textures/gui/container/welding_table.png");
     public WeldingTableScreen(WeldingTableScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
@@ -34,6 +37,6 @@ public class WeldingTableScreen extends HandledScreen<WeldingTableScreenHandler>
     protected void init() {
         super.init();
         // 将标题居中
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
+        titleX = 8;
     }
 }

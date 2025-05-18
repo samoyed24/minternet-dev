@@ -2,6 +2,7 @@ package com.samoyed24.minternet.block.entity;
 
 import com.samoyed24.minternet.Minternet;
 import com.samoyed24.minternet.block.ModBlocks;
+import com.samoyed24.minternet.screen.ShapingTableScreenHandler;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,10 +14,14 @@ public class ModBlockEntityTypes {
     }
 
     public static final BlockEntityType<WeldingTableBlockEntity> WELDING_TABLE_ENTITY = register(
-            "welding_table",
+        "welding_table",
 
-            // 对于 1.21.2 之前的版本，请使用 BlockEntityType.Builder。
-            BlockEntityType.Builder.create(WeldingTableBlockEntity::new, ModBlocks.WELDING_TABLE).build()
+        // 对于 1.21.2 之前的版本，请使用 BlockEntityType.Builder。
+        BlockEntityType.Builder.create(WeldingTableBlockEntity::new, ModBlocks.WELDING_TABLE).build()
+    );
+    public static final BlockEntityType<ShapingTableEntity> SHAPING_TABLE_ENTITY = register(
+        "shaping_table",
+        BlockEntityType.Builder.create(ShapingTableEntity::new, ModBlocks.SHAPING_TABLE).build()
     );
 
     public static void registerBlockEntityTypes() {

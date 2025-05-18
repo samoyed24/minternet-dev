@@ -72,6 +72,10 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_PLATE);
                         entries.add(ModItems.IRON_PLATE);
                         entries.add(ModItems.TIN_PLATE);
+                        entries.add(ModItems.CRUDE_TIN_ROD);
+                        entries.add(ModItems.CRUDE_IRON_ROD);
+                        entries.add(ModItems.TIN_WIRE);
+                        entries.add(ModItems.IRON_WIRE);
                     }).build());
     public static void registerModItemGroups() {
         Minternet.LOGGER.info("Registering Item Groups");
